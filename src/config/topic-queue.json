@@ -1,0 +1,144 @@
+[
+  {
+    "id": "fritzbox-power-dsl-led-blinkt-ursachen-loesung",
+    "category": "router-wlan",
+    "keyword": "FritzBox Power/DSL LED blinkt dauerhaft: Kabel, Telefondose & Störung prüfen",
+    "intent": "informational",
+    "status": "published",
+    "publishedAt": "2026-11-13T22:47:11.641Z"
+  },
+  {
+    "id": "windows-update-fehlercode-0x80070002-reparieren",
+    "category": "pc-smartphone",
+    "keyword": "Windows Update Fehlercode 0x80070002 / 0x800f081f ohne Neuinstallation beheben",
+    "intent": "informational",
+    "status": "published",
+    "publishedAt": "2026-11-13T22:47:55.954Z"
+  },
+  {
+    "id": "spuelmaschine-fehlercode-e24-e25-bosch-siemens",
+    "category": "spuelmaschine-kueche",
+    "keyword": "Spülmaschine Fehlercode E24 & E25: Pumpenabdeckung und Siphon Schritt für Schritt prüfen",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "waschmaschine-fehler-5c-se-samsung-pumpt-nicht",
+    "category": "waschmaschine-trockner",
+    "keyword": "Samsung Waschmaschine Fehlercode 5C / 5E / SE beheben: Ablauf & Sieb reinigen",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "viessmann-heizung-stoerung-f4-flammensignal",
+    "category": "heizung-therme",
+    "keyword": "Viessmann Störung F4 / F5: Ursachen für fehlendes Flammensignal verständlich erklärt",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "iphone-warnung-fluessigkeit-im-lightning-usb-c-anschluss",
+    "category": "pc-smartphone",
+    "keyword": "Handy-Warnung „Flüssigkeit im Anschluss erkannt“: Was tun statt Reis-Mythos?",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "waermepumpentrockner-behaelter-voll-blinkt-trotz-leeren",
+    "category": "waschmaschine-trockner",
+    "keyword": "Trockner zeigt „Behälter voll“ obwohl leer: Schwimmerschalter und Kondensatpumpe prüfen",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "aeg-spuelmaschine-fehlercode-i20-i30-beheben",
+    "category": "spuelmaschine-kueche",
+    "keyword": "AEG Spülmaschine zeigt i20 oder i30: Druckwächter, Abfluss und Bodenwanne prüfen",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "wlan-fehler-kein-internet-gesichert-windows-loesen",
+    "category": "router-wlan",
+    "keyword": "Windows zeigt „Kein Internet, gesichert“ im WLAN: DNS, IP-Adresse & Adapter retten",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "induktionskochfeld-fehlercode-e6-e9-oder-u-erkennung",
+    "category": "spuelmaschine-kueche",
+    "keyword": "Induktionskochfeld blinkt „U“ oder Fehler E / F: Topferkennung und Überhitzung prüfen",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "bauknecht-whirlpool-waschmaschine-f05-f06-fehler",
+    "category": "waschmaschine-trockner",
+    "keyword": "Bauknecht Waschmaschine Fehlercode F05, F06 oder F08: Sensor, Motor & Abpumpen checken",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "kaffeevollautomat-allgemeine-stoerung-bruehgruppe-klemmt",
+    "category": "spuelmaschine-kueche",
+    "keyword": "Kaffeevollautomat „Allgemeine Störung“ oder „Brühgruppe einsetzen“ sicher lösen",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "heizung-wasserdruck-unter-1-bar-fehlercode-f22",
+    "category": "heizung-therme",
+    "keyword": "Heizungsfehler F.22 / Wassermangel: Manometer ablesen & Heizungswasser richtig nachfüllen",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "telekom-speedport-wlan-fehler-keine-verbindung",
+    "category": "router-wlan",
+    "keyword": "Speedport blinkt rot oder orange: Link-LED, Zugangsdaten & Line-Reset durchführen",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "drucker-fehlerstatus-offline-windows-warteschlange",
+    "category": "pc-smartphone",
+    "keyword": "Drucker zeigt „Fehlerstatus“ oder „Offline“ trotz WLAN: Druckspooler in 2 Minuten retten",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "lg-waschmaschine-fehler-oe-ue-de-beheben",
+    "category": "waschmaschine-trockner",
+    "keyword": "LG Waschmaschine Fehlercodes OE, UE, dE und IE: Die schnelle Übersicht zur Selbsthilfe",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "miele-spuelmaschine-f11-f70-zulauf-ablauf-blinkt",
+    "category": "spuelmaschine-kueche",
+    "keyword": "Miele Geschirrspüler F11 / F70 oder „Zulauf/Ablauf“: Rückschlagventil einfach reinigen",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "buderus-junkers-heizung-fehlercode-6a-ea-keine-flamme",
+    "category": "heizung-therme",
+    "keyword": "Buderus / Junkers Fehlercode 6A oder EA: Was die Zündstörung konkret bedeutet",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "usb-geraet-wurde-nicht-erkannt-fehler-43-windows",
+    "category": "pc-smartphone",
+    "keyword": "Windows „USB-Gerät wurde nicht erkannt (Fehlercode 43)“: Controller und Kabel prüfen",
+    "intent": "informational",
+    "status": "pending"
+  },
+  {
+    "id": "vodafone-router-rote-internet-led-dns-ausfall",
+    "category": "router-wlan",
+    "keyword": "Kabelrouter blinkt rot bei Internet/Telefon: Koax-Kabel, Rückwegstörung & Neustart prüfen",
+    "intent": "informational",
+    "status": "pending"
+  }
+]

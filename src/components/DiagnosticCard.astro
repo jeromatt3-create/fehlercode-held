@@ -1,0 +1,32 @@
+---
+interface Props {
+  errorCodes?: string[];
+  brands?: string;
+  selfFixLevel?: string;
+  timeRequired?: string;
+  savedCost?: string;
+}
+const {
+  errorCodes = [],
+  brands = '',
+  selfFixLevel = 'Selbst prüfbar',
+  timeRequired = 'ca. 15 Min.',
+  savedCost = 'Techniker-Anfahrt gespart',
+} = Astro.props;
+---
+
+<section class="tool-panel" style="margin-bottom:1.75rem;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.6rem;margin-bottom:0.9rem;">
+    <div style="display:flex;gap:0.4rem;flex-wrap:wrap;align-items:center;">
+      <strong style="font-size:0.9rem;">Betroffene Codes:</strong>
+      {errorCodes.map((c) => <span class="code-chip">{c}</span>)}
+    </div>
+    {brands && <span style="font-size:0.86rem;color:var(--text-muted);"><strong>Marken:</strong> {brands}</span>}
+  </div>
+
+  <div class="recipe-meta-strip" style="margin-bottom:0;">
+    <div><strong>🚦 Selbsthilfe-Status:</strong><br />{selfFixLevel}</div>
+    <div><strong>⏱️ Zeitaufwand:</strong><br />{timeRequired}</div>
+    <div><strong>💶 Mögliche Ersparnis:</strong><br />{savedCost}</div>
+  </div>
+</section>

@@ -1,0 +1,155 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AdSlot from '../components/AdSlot.astro';
+import { SITE_CONFIG, getCategoryList, getCategoryBySlug } from '../config/site.config.mjs';
+import { withBase } from '../utils/url.js';
+
+
+const allArticles = await getCollection('articles');
+const articles = allArticles.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const categories = getCategoryList();
+---
+
+<BaseLayout>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="hero-badge">FehlercodeHeld • Aktuell {new Date().getFullYear()}</span>
+        <h1>Blinkender Fehlercode? Diagnose finden &amp; teuren Kundendienst oft sparen</h1>
+        <p>Suche direkt nach deinem Code (z. B. E18, E24, F28) oder Symptom und prüfe in 3 Minuten, ob du es sicher selbst lösen kannst.</p>
+        
+        <div class="diag-search-box">
+          <input id="diag-search" type="search" placeholder="Fehlercode oder Problem eingeben (z. B. E18, E15, F.28, pumpt nicht)..." aria-label="Fehlercode suchen" />
+          <a href="#alle-beitraege" class="btn-primary">Suchen</a>
+        </div>
+      </div>
+      
+      <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:12px;padding:1.35rem;">
+        <strong style="display:block;margin-bottom:0.5rem;">Häufig gesuchte Fehlercodes:</strong>
+        <div style="display:flex;gap:0.45rem;flex-wrap:wrap;margin-bottom:0.8rem;">
+          {['E18', 'E15', 'F.28', 'E24', 'WLAN', 'Update'].map((code) => (
+            <button type="button" class="code-chip quick-code-btn" data-code={code} style="border:none;cursor:pointer;padding:0.32rem 0.7rem;">
+              {code}
+            </button>
+          ))}
+        </div>
+        <div style="font-size:0.85rem;color:#cbd5e1;">
+          Klicke einen Code an oder nutze das Suchfeld links, um sofort die passende Selbsthilfe-Anleitung anzuzeigen.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Themenbereiche</h2>
+        <span style="color:var(--text-muted);font-size:0.9rem;">{articles.length} Beiträge in {categories.length} Rubriken</span>
+      </div>
+      <div class="category-grid">
+        {categories.map((cat) => (
+          <a href={withBase(`/kategorie/${cat.slug}/`) } class="category-card">
+            <span class="category-icon">{cat.icon}</span>
+            <h3>{cat.name}</h3>
+            <p>{cat.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <AdSlot placement="header" />
+
+  <section class="section" id="alle-beitraege">
+    <div class="container">
+      <div class="section-header">
+        <h2>Alle Fehlercodes & Soforthilfen</h2>
+        <span id="diag-filter-status" style="color:var(--text-muted);font-size:0.9rem;">{articles.length} Einträge</span>
+      </div>
+
+      <div class="articles-grid">
+        {articles.map((article) => {
+          const cat = getCategoryBySlug(article.data.category);
+          const dateStr = article.data.pubDate.toLocaleDateString('de-DE', { year: 'numeric', month: 'short', day: 'numeric' });
+          const searchBlob = [
+            article.data.title,
+            article.data.description,
+            article.data.brands || '',
+            ...(article.data.errorCodes || []),
+            ...(article.data.keywords || []),
+          ].join(' ');
+          return (
+            <article class="article-card" data-diag-card data-search={searchBlob}>
+              <a href={withBase(`/artikel/${article.id}/`) } class="article-card-media">
+                {article.data.heroImage && <img src={withBase(article.data.heroImage)} alt={article.data.title} loading="lazy" />}
+              </a>
+              <div class="article-card-body">
+                <div class="article-meta-row">
+                  <span class="cat-tag">{cat.icon} {cat.name}</span>
+                  <span>{dateStr}</span>
+                </div>
+                {article.data.errorCodes && article.data.errorCodes.length > 0 && (
+                  <div style="display:flex;gap:0.35rem;flex-wrap:wrap;">
+                    {article.data.errorCodes.slice(0, 3).map((code) => <span class="code-chip">{code}</span>)}
+                  </div>
+                )}
+                {article.data.prepMinutes && (
+                  <div style="display:flex;gap:0.6rem;font-size:0.82rem;color:var(--primary-dark);font-weight:700;">
+                    <span>⏱️ {article.data.prepMinutes} Min.</span>
+                    {article.data.costPerServing && <span>💶 {article.data.costPerServing}</span>}
+                  </div>
+                )}
+                {article.data.savingPotential && (
+                  <div style="font-size:0.82rem;color:var(--primary-dark);font-weight:700;">
+                    💡 Potenzial: {article.data.savingPotential}
+                  </div>
+                )}
+                <h3><a href={withBase(`/artikel/${article.id}/`) }>{article.data.title}</a></h3>
+                <p>{article.data.description}</p>
+                <div class="article-card-footer">
+                  <span>{article.data.readingTime || 6} Min. Lesezeit</span>
+                  <a href={withBase(`/artikel/${article.id}/`) }>Zur Lösung →</a>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const searchInput = document.getElementById('diag-search') as HTMLInputElement | null;
+  const cards = document.querySelectorAll('[data-diag-card]');
+  const statusEl = document.getElementById('diag-filter-status');
+
+  function applyFilter(query: string) {
+    const q = query.trim().toLowerCase();
+    let visible = 0;
+    cards.forEach((card) => {
+      const hay = (card.getAttribute('data-search') || '').toLowerCase();
+      const match = !q || hay.includes(q);
+      (card as HTMLElement).style.display = match ? 'flex' : 'none';
+      if (match) visible++;
+    });
+    if (statusEl) {
+      statusEl.textContent = q
+        ? visible + ' Diagnose(n) für „' + query.trim() + '“ gefunden'
+        : cards.length + ' Fehlercode-Anleitungen verfügbar';
+    }
+  }
+
+  searchInput?.addEventListener('input', () => applyFilter(searchInput.value));
+  document.querySelectorAll('.quick-code-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const c = btn.getAttribute('data-code') || '';
+      if (searchInput) searchInput.value = c;
+      applyFilter(c);
+      document.getElementById('alle-beitraege')?.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
