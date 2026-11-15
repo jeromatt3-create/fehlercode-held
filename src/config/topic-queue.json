@@ -59,7 +59,8 @@
     "category": "spuelmaschine-kueche",
     "keyword": "AEG Spülmaschine zeigt i20 oder i30: Druckwächter, Abfluss und Bodenwanne prüfen",
     "intent": "informational",
-    "status": "pending"
+    "status": "published",
+    "publishedAt": "2026-11-15T07:23:06.747Z"
   },
   {
     "id": "wlan-fehler-kein-internet-gesichert-windows-loesen",
