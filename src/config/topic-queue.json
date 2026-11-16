@@ -111,7 +111,8 @@
     "category": "pc-smartphone",
     "keyword": "Drucker zeigt „Fehlerstatus“ oder „Offline“ trotz WLAN: Druckspooler in 2 Minuten retten",
     "intent": "informational",
-    "status": "pending"
+    "status": "published",
+    "publishedAt": "2026-11-16T09:01:05.253Z"
   },
   {
     "id": "lg-waschmaschine-fehler-oe-ue-de-beheben",
