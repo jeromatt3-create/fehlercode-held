@@ -133,7 +133,8 @@
     "category": "heizung-therme",
     "keyword": "Buderus / Junkers Fehlercode 6A oder EA: Was die Zündstörung konkret bedeutet",
     "intent": "informational",
-    "status": "pending"
+    "status": "published",
+    "publishedAt": "2026-11-16T18:13:52.237Z"
   },
   {
     "id": "usb-geraet-wurde-nicht-erkannt-fehler-43-windows",
