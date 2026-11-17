@@ -126,7 +126,8 @@
     "category": "spuelmaschine-kueche",
     "keyword": "Miele Geschirrspüler F11 / F70 oder „Zulauf/Ablauf“: Rückschlagventil einfach reinigen",
     "intent": "informational",
-    "status": "pending"
+    "status": "published",
+    "publishedAt": "2026-11-17T07:37:41.281Z"
   },
   {
     "id": "buderus-junkers-heizung-fehlercode-6a-ea-keine-flamme",
