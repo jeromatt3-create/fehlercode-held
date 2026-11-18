@@ -150,6 +150,7 @@
     "category": "router-wlan",
     "keyword": "Kabelrouter blinkt rot bei Internet/Telefon: Koax-Kabel, Rückwegstörung & Neustart prüfen",
     "intent": "informational",
-    "status": "pending"
+    "status": "published",
+    "publishedAt": "2026-11-18T07:34:52.375Z"
   }
 ]
