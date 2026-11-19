@@ -83,7 +83,8 @@
     "category": "waschmaschine-trockner",
     "keyword": "Bauknecht Waschmaschine Fehlercode F05, F06 oder F08: Sensor, Motor & Abpumpen checken",
     "intent": "informational",
-    "status": "pending"
+    "status": "published",
+    "publishedAt": "2026-11-19T18:05:42.333Z"
   },
   {
     "id": "kaffeevollautomat-allgemeine-stoerung-bruehgruppe-klemmt",
