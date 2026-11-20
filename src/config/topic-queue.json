@@ -146,7 +146,8 @@
     "category": "pc-smartphone",
     "keyword": "Windows „USB-Gerät wurde nicht erkannt (Fehlercode 43)“: Controller und Kabel prüfen",
     "intent": "informational",
-    "status": "pending"
+    "status": "published",
+    "publishedAt": "2026-11-20T07:35:49.120Z"
   },
   {
     "id": "vodafone-router-rote-internet-led-dns-ausfall",
