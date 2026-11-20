@@ -91,7 +91,8 @@
     "category": "spuelmaschine-kueche",
     "keyword": "Kaffeevollautomat „Allgemeine Störung“ oder „Brühgruppe einsetzen“ sicher lösen",
     "intent": "informational",
-    "status": "pending"
+    "status": "published",
+    "publishedAt": "2026-11-20T18:12:41.571Z"
   },
   {
     "id": "heizung-wasserdruck-unter-1-bar-fehlercode-f22",
