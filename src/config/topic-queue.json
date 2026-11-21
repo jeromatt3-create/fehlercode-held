@@ -76,7 +76,8 @@
     "category": "spuelmaschine-kueche",
     "keyword": "Induktionskochfeld blinkt „U“ oder Fehler E / F: Topferkennung und Überhitzung prüfen",
     "intent": "informational",
-    "status": "pending"
+    "status": "published",
+    "publishedAt": "2026-11-21T07:28:27.724Z"
   },
   {
     "id": "bauknecht-whirlpool-waschmaschine-f05-f06-fehler",
